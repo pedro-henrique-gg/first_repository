@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -5,16 +11,17 @@ html {
 body {
     background-color: #f5f5f5;
     font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 .main_container {
     display: block;
-    width: 100vw;
+    width: 100%;
 }
 
 .container {
-    display: block;
-    float: left;
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
     width: 100%;
     margin: 0 auto;
@@ -29,64 +36,77 @@ h1 {
 h2 {
     font-size: 2rem;
     color: #254159;
-    margin-bottom: 20px;
+    margin: 20px 20px;
 }
 
 h3 {
     font-size: 1.8rem;
     color: #254159;
-    margin-bottom: 20px;
+    margin: 20px 20px;
     padding-top: 10px;
 }
 
 h4 {
     font-size: 1.6rem;
     color: #254159;
-    margin-bottom: 10px;
+    margin: 20px 20px;
     padding-top: 10px;
 }
 
 p {
+    width: 50%;
     margin-bottom: 10px;
     line-height: 1.4;
 }
 
 ol {
-    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
 }
 
 ol li {
-    font-size: 1.4rem;
-    color: #454545;
+    font-size: 1.5rem;
 }
 
 header {
     background: #fff;
-    display: block;
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 10px;
     border-bottom: 1px solid #254159;
 }
 
 section {
-    float: left;
+    display: flex;
     background-color: #fff;
     font-size: 1.5rem;
     width: 100%;
     padding: 20px 20px 20px 0;
 }
 
-section nav {
-    display: block;
-    float: left;
+nav {
     width: 30%;
 }
 
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-right: 10px;
+}
+
 nav li {
-    margin: 1px 20px 1px 0;
     padding: 10px;
-    background-color: #efefef;
+    font-size: 2rem;
+    border: solid;
+    border-width: 1px;
+    border-color: #385874;
+    border-radius: 5px;
+    background-color: #dfdfdf;
 }
 
 nav li:hover {
@@ -103,9 +123,11 @@ nav a:hover {
 }
 
 section article {
-    display: block;
-    float: left;
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: justify;
 }
 
 footer {
@@ -124,3 +146,106 @@ footer small {
     font-size: 80%;
     display: block;
 }
+
+#tenho_interesse {
+    width: 100%;
+    border-top: 1px solid #254159;
+}
+
+#tenho_interesse p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cognito {
+    border: 1px solid #254159;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+}
+
+.cog-branding, 
+.branding__powered,
+.cog-abuse {
+    display: none !important;
+}
+
+/* 
+-----------------------------------------------------
+RESPONSIVIDADE PARA TABLETS 
+-----------------------------------------------------
+*/
+
+@media (max-width: 820px) {
+
+    section img {
+        width: 600px;
+        height: 200px;
+    }
+
+    nav {
+        width: 50%;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav li {
+        font-size: 1.2rem;
+    }
+
+    ol {
+        width: 60%;
+        gap: 15px;
+    }
+
+    p {
+        width: 60%;
+    }
+}
+
+/*
+-----------------------------------------------------
+RESPONSIVIDADE PARA CELULARES 
+-----------------------------------------------------
+*/
+
+@media (max-width: 430px) {
+
+    .container img {
+        width: 119px;
+        height: 35px;
+    }
+
+    section img {
+        width: 350px;
+        height: 150px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav li {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    ol {
+        width: 70%;
+        gap: 15px;
+    }
+
+    p {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
