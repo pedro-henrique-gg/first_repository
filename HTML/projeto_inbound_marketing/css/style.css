@@ -16,6 +16,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -93,6 +94,16 @@ section {
     width: 100%;
 }
 
+.section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.section p {
+    text-align: justify;
+}
+
 nav ul {
     display: flex;
     flex-direction: row;
@@ -153,6 +164,10 @@ footer small {
     align-items: flex-start;
     padding: 20px 0px 0px 20px;
     background-color: var(--color_bg_blue);
+}
+
+.cognito_mais {
+    display: block;
 }
 
 .cog-branding, 
@@ -349,6 +364,10 @@ RESPONSIVIDADE PARA CELULARES
     section img {
         max-width: 100%;
         height: 150px;
+    }
+
+    .section p {
+        width: 90%;
     }
 
     nav ul {
